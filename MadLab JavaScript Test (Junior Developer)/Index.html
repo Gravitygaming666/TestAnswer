@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gutenberg Book List</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #373232;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Content that fits between the bars */
+.content {
+  margin-top: 50px; /* Make space for the top bar */
+  margin-bottom: 50px; /* Make space for the bottom bar */
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+    .book-container {
+      margin-bottom: 20px;
+    }
+    .book-title {
+      font-weight: bold;
+      color: #75D9EA;
+    }
+    .book-author {
+      font-style: italic;
+      color: #75D9EA;
+    }
+    .loading {
+      font-size: 20px;
+      color: #75D9EA;
+    }
+    h1{
+        color: #75D9EA;
+        text-align: center;
+
+    }
+   book-item{
+    color: #75D9EA;
+
+   }
+
+    .black-bar {
+  width: 100%;
+  background-color: #2F2727;
+  height: 100px; /* Height of the bars */
+}
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /* Make sure the bar is on top of other elements */
+}
+
+    .bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+            }
+
+          /* Apply the color to the book list section */
+#book-list div {
+  padding: 15px;
+  margin: 20px 0;
+}
+
+/* Styling the book title */
+#book-list h2 {
+  font-size: 24px;
+  color: #75D9EA; 
+}
+
+/* Styling the book details (author, subjects, etc.) */
+#book-list p {
+  font-size: 18px;
+  color: #75D9EA; 
+}
+
+#book-list a {
+  color: #75D9EA; 
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="black-bar top-bar">
+  <h1>Project Gutenberg Book List</h1>
+    </div>
+  <br></br>
+  <br></br>
+  <div class="content">
+  <div id="loading" class="loading">Loading books...</div>
+  <div id="book-list"></div> <!-- Placeholder for book list -->
+  </div>
+  <script src="Test.js"></script>
+  <div class="black-bar bottom-bar"></div>
+</body>
+</html>
